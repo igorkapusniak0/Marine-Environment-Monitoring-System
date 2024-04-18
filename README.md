@@ -1,5 +1,8 @@
 # Marine-Environment-Monitoring-System
 
+## Overview
+This project develops a marine environment monitoring system to gather data on water temperature. Utilizing a combination of sensors and microcontrollers, the system captures real-time temperature data, transmitting it securely to the cloud for analysis and public access. 
+
 For this project we aim to develop a marine environment monitoring system to gather data on the temperature of water.
 
 Our approach involves utilising a variety of sensors, including a waterproof thermometer for temperature measurements. The sensor will be integrated with an Arduino Nano, which will serve for the processing of data. The data collected will then be transmitted via a Pycom SiPy microcontroller to the Sigfox cloud.
@@ -10,15 +13,25 @@ Once the data reaches the Sigfox cloud it will be sent to ThingSpeak and an AWS 
 
 For visualisation and interaction of the collected data, ThingSpeak will be used, as they offer an easy way for displaying data through graphs and other methods. 
 
-# Tools, Technology and Equipment
-Software:
-Python, C++, InfluxDB, ThingSpeak, Sigfox, Docker, Solidworks, Cura Slicer, MQTT
-Hardware:
-Arduino Nano, Pycom SiPy Microcontroller and antenna, waterproof thermometer, wires, waterproof container, rubber seals, 3x1.5V battery, weight.
+## Prerequisites
+- Basic knowledge of electronics and programming
+- Familiarity with Python, C++, and IoT concepts
+- Operating System: Any OS that supports Docker and Python
+
+## Tools, Technology, and Equipment
+### Software
+- Python, C++, InfluxDB, ThingSpeak, Sigfox, Docker, MQTT
+
+### Hardware
+- Arduino Nano
+- Pycom SiPy Microcontroller and antenna
+- DS18B20 - Waterproof Thermometer
+- Wires, waterproof container, rubber seals, 3x1.5V battery, weight
 
 # Software Set Up
 
-Install dependencies:
+## Installation
+First, install the necessary software dependencies:
 ```bash
 pip3 install -r requirements.txt
 sudo apt install docker
@@ -30,8 +43,8 @@ Pull the container
 ```
 docker pull influxdb
 ```
-Next, set the relevant information for the container.\
-For more information visit: https://hub.docker.com/_/influxdb
+Configure and run the InfluxDB container:\
+
 ```
 docker run -d -p 8086:8086 \
   -v "$PWD/data:/var/lib/influxdb2" \
@@ -43,6 +56,7 @@ docker run -d -p 8086:8086 \
   -e DOCKER_INFLUXDB_INIT_BUCKET=<BUCKET_NAME> \
   influxdb:2
 ```
+For more information visit: https://hub.docker.com/_/influxdb
 
 # Hardware Setup
 
@@ -58,6 +72,9 @@ Arduino wiring Diagram:
 Pycom SiPy Datasheet:
 Arduino Tx goes to P16 \
 Battery pack connects to Vin and GND
+
 ![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/7819c774-5575-4627-8ca1-bcad84961384)
+
+
 
 
