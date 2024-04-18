@@ -16,7 +16,7 @@ Python, C++, InfluxDB, ThingSpeak, Sigfox, Docker, Solidworks, Cura Slicer, MQTT
 Hardware:
 Arduino Nano, Sigfox Microcontroller and antenna, thermistor or waterproof thermometer, gyroscope sensor, wires, waterproof container, rubber seals, 3x1.5V battery, weight.
 
-# Set Up
+# Software Set Up
 
 Install dependencies:
 ```bash
@@ -43,4 +43,8 @@ docker run -d -p 8086:8086 \
   -e DOCKER_INFLUXDB_INIT_BUCKET=<BUCKET_NAME> \
   influxdb:2
 ```
+
+# Hardware Setup
+![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/d48e4518-a2b0-4354-925b-933105d0f2d6)
+
 
