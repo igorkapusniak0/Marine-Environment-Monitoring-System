@@ -60,6 +60,9 @@ docker run -d -p 8086:8086 \
 ```
 For more information visit: https://hub.docker.com/_/influxdb
 
+### Setting up getSigfox.py
+This script with recieve data from the [Sigfox Backend](https://backend.sigfox.com/)
+
 # Hardware Setup
 
 ##Equipment:
