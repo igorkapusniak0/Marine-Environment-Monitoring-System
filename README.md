@@ -118,16 +118,17 @@ sudo systemctl status myscript.service
 
 # Hardware Setup
 
-## Equipment:
+### Equipment:
 Arduino Nano \
 Pycom SiPy \
 DS18B20 - Waterproof Thermometer 
 
-Arduino wiring Diagram:
+###Arduino wiring Diagram:
 
 ![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/d48e4518-a2b0-4354-925b-933105d0f2d6)
 
-## Pycom SiPy Datasheet: \
+### Pycom SiPy Datasheet: 
+
 Arduino Tx goes to P16 \
 Battery pack connects to Vin and GND
 
