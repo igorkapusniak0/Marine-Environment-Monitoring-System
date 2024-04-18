@@ -47,9 +47,9 @@ docker run -d -p 8086:8086 \
 # Hardware Setup
 
 Equipment:
-Arduino Nano
-Pycom SiPy
-DS18B20 - Waterproof Thermometer
+Arduino Nano \
+Pycom SiPy \
+DS18B20 - Waterproof Thermometer \ 
 
 Arduino wiring Diagram:
 
