@@ -16,6 +16,8 @@ Python, C++, InfluxDB, ThingSpeak, Sigfox, Docker, Solidworks, Cura Slicer, MQTT
 Hardware:
 Arduino Nano, Sigfox Microcontroller and antenna, thermistor or waterproof thermometer, gyroscope sensor, wires, waterproof container, rubber seals, 3x1.5V battery, weight.
 
+#Set Up
+
 Install dependencies:
 ```bash
 pip3 install -r requirements.txt
@@ -29,7 +31,7 @@ Pull the container
 docker pull influxdb
 ```
 Next, set the relevant information for the container.
-For more information visit: ```https://hub.docker.com/_/influxdb```
+For more information visit: https://hub.docker.com/_/influxdb
 ```
 docker run -d -p 8086:8086 \
   -v "$PWD/data:/var/lib/influxdb2" \
