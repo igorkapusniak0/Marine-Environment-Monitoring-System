@@ -1,0 +1,5 @@
+influxdb-client
+flask
+mosquitto
+schedule
+paho-mqtt==1.6.1
