@@ -135,5 +135,14 @@ Battery pack connects to Vin and GND
 ![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/7819c774-5575-4627-8ca1-bcad84961384)
 
 
+## Sigfox to Influx
+![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/1d170561-0f2b-4da3-99f8-2866ba5c6515)
+
+## Sigfox to ThingSpeak
+
+![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/3a6949dd-3de5-4ada-843e-efbaead97604)
+
+
+
 
 
