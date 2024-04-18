@@ -42,12 +42,12 @@ sudo apt-get install mosquitto
 
 ###Setting Up InfluxDB
 Pull the container
-```
+```bash
 docker pull influxdb
 ```
 Configure and run the InfluxDB container:\
 
-```
+```bash
 docker run -d -p 8086:8086 \
   -v "$PWD/data:/var/lib/influxdb2" \
   -v "$PWD/config:/etc/influxdb2" \
@@ -61,7 +61,60 @@ docker run -d -p 8086:8086 \
 For more information visit: https://hub.docker.com/_/influxdb
 
 ### Setting up getSigfox.py
-This script with recieve data from the [Sigfox Backend](https://backend.sigfox.com/)
+This script with recieve data from the [Sigfox Backend](https://backend.sigfox.com/) and send it the database and the MQTT Broker
+
+#### Initial Configuration
+Before setting up the service, you need to configure the `getSigfox.py` script with your specific database and MQTT broker settings.
+
+1. Open the script in an editor:
+```bash
+   sudo nano /home/ubuntu/path/to/your/script/getSigfox.py
+```
+Modify the following variables with your details:
+- url_str: Your MQTT Broker URL
+- base_topic: Your MQTT Topic
+- INFLUXDB_TOKEN: Your InfluxDB Token
+- INFLUXDB_ORGANISATION: Your InfluxDB organisation
+- INFLUXDB_URL: Your URL to the Server and Port to InfluxDB
+- INFLUXDB_BUCKET: Your InfluxDB Bucket
+
+- Save the changes and exit the editor.
+
+```bash
+sudo nano /etc/systemd/system/getSigfox.service
+```
+In the editor, add the following configuration: \
+Make sure to adjust the Working and ExecStart Directory to your own
+```bash
+[Unit]
+Description=My Python Script Service
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/path/to/your/script
+ExecStart=/usr/bin/python3 /home/ubuntu/path/to/your/script/getSigfox.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+Reload Systemd: This updates systemd to recognize your new service.
+```bash
+sudo systemctl daemon-reload
+```
+Enable the Service: This sets your script to start at boot.
+```bash
+sudo systemctl enable myscript.service
+```
+Start the Service: To start running your service immediately.
+```bash
+sudo systemctl start myscript.service
+```
+Check the Status: To verify that your service is active and running.
+```bash
+sudo systemctl status myscript.service
+```
 
 # Hardware Setup
 
