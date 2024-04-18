@@ -25,7 +25,7 @@ mqttc.on_publish = on_publish
 url_str = "mqtt://broker.emqx.io:1883"
 url = urlparse(url_str)
 # Define MQTT Topic
-base_topic = url.path[1:] if url.path else "Marine_Monitor_IOT/temp"
+base_topic = url.path[1:] if url.path else "Your/Topic"
 
 # Connect to MQTT
 if url.username:
@@ -37,17 +37,20 @@ try:
 except Exception as e:
     print("Connection failed: " + str(e))
     sys.exit(1)
+
+
+
 # Define InfluxDB Token
-token = "EoMSb5MEILxDkE1LbiZBPdw_DPuN8BmrF-_0K3ulzvs-Zk7PnEgWq2jBYldbDkN3xI-pkkQK2uJcdgqf2krANA=="
+INFLUXDB_TOKEN = "EoMSb5MEILxDkE1LbiZBPdw_DPuN8BmrF-_0K3ulzvs-Zk7PnEgWq2jBYldbDkN3xI-pkkQK2uJcdgqf2krANA=="
 # Define InfluxDB Organisation
-org = "your-initial-organisation"
+INFLUXDB_ORGANISATION = "your-initial-organisation"
 # Define public URL and PORT to InfluxDB 
-url = "http://54.90.164.59:8086"
+INFLUXDB_URL = "http://192.168.178.100:8086"
 # Define InfluxDB bucket
-bucket="your-initial-bucket"
+INFLUXDB_BUCKET="your-initial-bucket"
 
 
-write_client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
+write_client = influxdb_client.InfluxDBClient(url=INFLUXDB_URL, token=INFLUXDB_TOKEN, org=INFLUXDB_ORGANISATION)
 write_api = write_client.write_api(write_options=SYNCHRONOUS)
 
 app = Flask(__name__)
@@ -73,7 +76,7 @@ def sigfox_webhook():
             .field("value", temp_value)
         )
       # Write to InfluxDB
-        write_api.write(bucket=bucket, org=org, record=point)
+        write_api.write(bucket=INFLUXDB_Bucket, org=INFLUXDB_ORGANISATION, record=point)
         print("Data put into DB")
     else:
         print("Temperature data ('temp') not found in the payload")
@@ -81,4 +84,5 @@ def sigfox_webhook():
     return jsonify({'message': 'Data received and processed'})
 
 if __name__ == '__main__':
+    # Change port if port is already taken
     app.run(debug=True, host='0.0.0.0', port='5000')
