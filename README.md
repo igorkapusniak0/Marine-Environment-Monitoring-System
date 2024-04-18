@@ -16,7 +16,7 @@ Python, C++, InfluxDB, ThingSpeak, Sigfox, Docker, Solidworks, Cura Slicer, MQTT
 Hardware:
 Arduino Nano, Sigfox Microcontroller and antenna, thermistor or waterproof thermometer, gyroscope sensor, wires, waterproof container, rubber seals, 3x1.5V battery, weight.
 
-#Set Up
+# Set Up
 
 Install dependencies:
 ```bash
