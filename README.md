@@ -30,7 +30,7 @@ Pull the container
 ```
 docker pull influxdb
 ```
-Next, set the relevant information for the container.
+Next, set the relevant information for the container.\
 For more information visit: https://hub.docker.com/_/influxdb
 ```
 docker run -d -p 8086:8086 \
@@ -43,3 +43,4 @@ docker run -d -p 8086:8086 \
   -e DOCKER_INFLUXDB_INIT_BUCKET=<BUCKET_NAME> \
   influxdb:2
 ```
+
