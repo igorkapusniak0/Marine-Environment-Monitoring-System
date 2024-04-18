@@ -142,6 +142,12 @@ Battery pack connects to Vin and GND
 
 ![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/3a6949dd-3de5-4ada-843e-efbaead97604)
 
+## MQTT Subscribe:
+Your/Topic needs to be replaced with the same one as set in getSigfox.py
+```bash
+python3 sub.py mqtt://broker.emqx.io:1883/YOUR/Topic
+```
+
 
 
 
