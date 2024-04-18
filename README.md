@@ -14,7 +14,7 @@ For visualisation and interaction of the collected data, ThingSpeak will be used
 Software:
 Python, C++, InfluxDB, ThingSpeak, Sigfox, Docker, Solidworks, Cura Slicer, MQTT
 Hardware:
-Arduino Nano, Sigfox Microcontroller and antenna, thermistor or waterproof thermometer, gyroscope sensor, wires, waterproof container, rubber seals, 3x1.5V battery, weight.
+Arduino Nano, Pycom SiPy Microcontroller and antenna, waterproof thermometer, wires, waterproof container, rubber seals, 3x1.5V battery, weight.
 
 # Software Set Up
 
@@ -45,6 +45,14 @@ docker run -d -p 8086:8086 \
 ```
 
 # Hardware Setup
+
+Equipment:
+Arduino Nano
+Pycom SiPy
+DS18B20 - Waterproof Thermometer
+
+Arduino wiring Diagram:
+
 ![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/d48e4518-a2b0-4354-925b-933105d0f2d6)
 
 
