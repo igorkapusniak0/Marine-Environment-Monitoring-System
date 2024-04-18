@@ -16,11 +16,12 @@ For visualisation and interaction of the collected data, ThingSpeak will be used
 ## Prerequisites
 - Basic knowledge of electronics and programming
 - Familiarity with Python, C++, and IoT concepts
-- Operating System: Any OS that supports Docker and Python
+- Operating System: Linux
+- Familiarity with 3D printing, modeling and slicing
 
 ## Tools, Technology, and Equipment
 ### Software
-- Python, C++, InfluxDB, ThingSpeak, Sigfox, Docker, MQTT
+- Python, C++, InfluxDB, ThingSpeak, Sigfox, Docker, MQTT, Solidworks, Cura
 
 ### Hardware
 - Arduino Nano
@@ -31,6 +32,7 @@ For visualisation and interaction of the collected data, ThingSpeak will be used
 # Software Set Up
 
 ## Installation
+
 First, install the necessary software dependencies:
 ```bash
 pip3 install -r requirements.txt
@@ -38,7 +40,7 @@ sudo apt install docker
 sudo apt-get install mosquitto
 ```
 
-Setting Up InfluxDB
+###Setting Up InfluxDB
 Pull the container
 ```
 docker pull influxdb
@@ -60,7 +62,7 @@ For more information visit: https://hub.docker.com/_/influxdb
 
 # Hardware Setup
 
-Equipment:
+##Equipment:
 Arduino Nano \
 Pycom SiPy \
 DS18B20 - Waterproof Thermometer 
