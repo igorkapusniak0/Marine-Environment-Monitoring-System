@@ -58,5 +58,6 @@ Arduino wiring Diagram:
 Pycom SiPy Datasheet
 Arduino Tx goes to P16
 Battery pack connects to Vin and GND
-![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/908d5d29-c655-4300-93eb-00b74b26fb74)
+![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/7819c774-5575-4627-8ca1-bcad84961384)
+
 
