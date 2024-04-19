@@ -41,11 +41,11 @@ except Exception as e:
 
 
 # Define InfluxDB Token
-INFLUXDB_TOKEN = "EoMSb5MEILxDkE1LbiZBPdw_DPuN8BmrF-_0K3ulzvs-Zk7PnEgWq2jBYldbDkN3xI-pkkQK2uJcdgqf2krANA=="
+INFLUXDB_TOKEN = "INFLUXDB-API-TOCKEN"
 # Define InfluxDB Organisation
 INFLUXDB_ORGANISATION = "your-initial-organisation"
 # Define public URL and PORT to InfluxDB 
-INFLUXDB_URL = "http://192.168.178.100:8086"
+INFLUXDB_URL = "http://Your IP Address:8086"
 # Define InfluxDB bucket
 INFLUXDB_BUCKET="your-initial-bucket"
 
