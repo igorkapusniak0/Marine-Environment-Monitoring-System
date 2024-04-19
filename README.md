@@ -63,7 +63,7 @@ For more information visit: https://hub.docker.com/_/influxdb
 ### Setting up getSigfox.py
 This script with recieve data from the [Sigfox Backend](https://backend.sigfox.com/) and send it the database and the MQTT Broker
 
-#### Initial Configuration
+### Initial Configuration
 Before setting up the service, you need to configure the `getSigfox.py` script with your specific database and MQTT broker settings.
 
 1. Open the script in an editor:
@@ -123,7 +123,7 @@ Arduino Nano \
 Pycom SiPy \
 DS18B20 - Waterproof Thermometer 
 
-###Arduino wiring Diagram:
+### Arduino wiring Diagram:
 
 ![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/d48e4518-a2b0-4354-925b-933105d0f2d6)
 
