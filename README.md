@@ -151,9 +151,9 @@ python3 sub.py mqtt://broker.emqx.io:1883/Your/Topic
 ```
 
 #3d Printing
-A few components need to be printed multiple times:
-28 x ([Nut](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/blob/main/threaded_rod_8x100.STL))
-4 x ([Threaded Bar](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/blob/main/nut_6x9.stl))
+A few components need to be printed multiple times: \
+28 x ([Nut](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/blob/main/nut_6x9.stl)) \
+4 x ([Threaded Bar](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/blob/main/threaded_rod_8x100.stl))
 
 All other files need to be printed once
 
