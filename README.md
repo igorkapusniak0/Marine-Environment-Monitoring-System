@@ -40,7 +40,7 @@ sudo apt install docker
 sudo apt-get install mosquitto
 ```
 
-###Setting Up InfluxDB
+### Setting Up InfluxDB
 Pull the container
 ```bash
 docker pull influxdb
