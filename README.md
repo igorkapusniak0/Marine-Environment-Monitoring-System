@@ -150,7 +150,7 @@ Your/Topic needs to be replaced with the same one as set in getSigfox.py
 python3 sub.py mqtt://broker.emqx.io:1883/Your/Topic
 ```
 
-![3D Model](Full Assembly.STL)
+![3D Model]([Full Assembly.STL](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/blob/main/Full%20Assembly.STL))
 
 
 
