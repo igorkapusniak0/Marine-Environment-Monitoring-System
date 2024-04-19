@@ -136,16 +136,18 @@ Battery pack connects to Vin and GND
 
 
 ## Sigfox to Influx
+To connect the Sigfox backend to the Influxdb set up the callback as seen below
 ![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/1d170561-0f2b-4da3-99f8-2866ba5c6515)
 
 ## Sigfox to ThingSpeak
-
+To connect the Sigfox backend to Thingspeak set up the callback as seen below
 ![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/3a6949dd-3de5-4ada-843e-efbaead97604)
 
 ## MQTT Subscribe:
+To access the data from the MQTT broker run the following commamd \
 Your/Topic needs to be replaced with the same one as set in getSigfox.py
 ```bash
-python3 sub.py mqtt://broker.emqx.io:1883/YOUR/Topic
+python3 sub.py mqtt://broker.emqx.io:1883/Your/Topic
 ```
 
 
