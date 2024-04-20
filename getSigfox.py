@@ -62,24 +62,32 @@ def sigfox_webhook():
     print(data)
     print("received")
 
-    if 'temp' in data:
-      # Convert Temp to decimal and from Kelvin to celcius
-        temp_value = ((float(data['temp'])/100)-272)
-        # MQTT Publish
-        mqttc.publish(base_topic + "/temperature", json.dumps({"temperature": temp_value, "timestamp": time.time()}))
-        print("Published temperature to MQTT.")
+    if data:
+        for key, value in data.items():
+            if isinstance(value, (int, float)):  # Check if the value is numeric
+                # Convert temperature from Kelvin to Celsius if key is 'temp'
+                if key == 'temp':
+                    value = (value / 100) - 272.15
+                
+                # MQTT Publish
+                mqtt_topic = f"{base_topic}/{key}"
+                mqttc.publish(mqtt_topic, json.dumps({key: value, "timestamp": time.time()}))
+                print(f"Published {key} to MQTT: {value}")
 
-        # InfluxDB POINT
-        point = (
-            Point("temperature")
-            .tag("source", "sigfox")
-            .field("value", temp_value)
-        )
-      # Write to InfluxDB
-        write_api.write(bucket=INFLUXDB_Bucket, org=INFLUXDB_ORGANISATION, record=point)
-        print("Data put into DB")
+                # InfluxDB Point
+                point = (
+                    Point("sensor_data")
+                    .tag("source", "sigfox")
+                    .tag("sensor_type", key)  # Tag each point with the key
+                    .field("value", value)
+                )
+                # Write to InfluxDB
+                write_api.write(bucket=INFLUXDB_BUCKET, org=INFLUXDB_ORGANISATION, record=point)
+                print(f"Data written to DB for {key}")
+            else:
+                print(f"Skipping {key}, not a numeric value")
     else:
-        print("Temperature data ('temp') not found in the payload")
+        print("No data found in the payload")
 
     return jsonify({'message': 'Data received and processed'})
 
