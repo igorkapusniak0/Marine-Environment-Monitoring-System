@@ -64,7 +64,25 @@ For more information visit: https://hub.docker.com/_/influxdb
 This script with recieve data from the [Sigfox Backend](https://backend.sigfox.com/) and send it the database and the MQTT Broker
 
 ### Initial Configuration
-Before setting up the service, you need to configure the `getSigfox.py` script with your specific database and MQTT broker settings.
+Before setting up the service, you need to configure the `getSigfox.py` script with your specific database and MQTT broker settings. \
+
+#### Obtaining InfluxDB tocken
+First get the InfluxDB tocken by going to the the servers ip address with the correct port number. \
+Login using username and password set before \
+Once on the main page select the box with the Python logo \
+![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/fdff44be-a8cb-4327-a146-fea786886619) \ 
+
+This will bring you to this page: \ 
+![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/f8c04c02-74d5-4461-a9e0-02fe63e937af) \ 
+
+From there click on 3rd Circle labeled Get Token:
+
+![image](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/33b7b528-5c52-43ca-87de-d7a0f70820b5)
+
+Copy it and save it!
+
+
+
 
 1. Open the script in an editor:
 ```bash
