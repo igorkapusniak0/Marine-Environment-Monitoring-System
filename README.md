@@ -152,7 +152,7 @@ python3 sub.py mqtt://broker.emqx.io:1883/Your/Topic
 
 # 3d Printing and Assembly
 A few components need to be printed multiple times: \
-28 x ([Nut](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/blob/main/STL Files/nut_6x9.stl)) \
+28 x ([Nut](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/blob/c814bcd994393994a3dece5189b4657378aa8260/Solidworks%20File/nut_6x9.SLDPRT)) \
 4 x ([Threaded Bar](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/blob/main/STL Filesthreaded_rod_8x100.stl))
 
 All other files need to be printed once
