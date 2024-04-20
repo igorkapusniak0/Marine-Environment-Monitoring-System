@@ -178,6 +178,17 @@ All other files need to be printed once
 A fully assembled holder should look like this: ([Full Assembly](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/blob/main/Full%20Assembly.STL))
 
 
+## Configuation of additional sensors
+To expand this project to work with additional sensors, a few changes need to be made.
+
+1. Sensor need to be soldered correctly to aduino.
+2. Correct libraries need to be imported.
+3. Data collected needs to be printed to serial.
+4. (Optional) if sensor needs room another disk should be 3D printed.
+5. Set up callbacks from the Sigfox Backend to Thingspeak and InfluxDB (give it an appropriate tag).
+6. 
+
+
 
 
 
