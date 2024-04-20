@@ -185,8 +185,9 @@ To expand this project to work with additional sensors, a few changes need to be
 2. Correct libraries need to be imported.
 3. Data collected needs to be printed to serial.
 4. (Optional) if sensor needs room another disk should be 3D printed.
-5. Set up callbacks from the Sigfox Backend to Thingspeak and InfluxDB (give it an appropriate tag).
-6. 
+5. Set up callbacks from the Sigfox Backend to Thingspeak and InfluxDB (give it an appropriate tag that differs from temp) /
+   The Python should not need to change as the data is inserted dynamically based on the key specified in the callback.
+  
 
 
 
