@@ -67,7 +67,7 @@ def sigfox_webhook():
             if isinstance(value, (int, float)):  # Check if the value is numeric
                 # Convert temperature from Kelvin to Celsius if key is 'temp'
                 if key == 'temp':
-                    value = (value / 100) - 272.15
+                    value = (value / 100) - 273
                 
                 # MQTT Publish
                 mqtt_topic = f"{base_topic}/{key}"
