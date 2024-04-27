@@ -191,6 +191,7 @@ To expand this project to work with additional sensors, a few changes need to be
 
   
 
+![ezgif-3-d903da6700](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/dd8b5079-44b3-40b0-9fb1-27d69c10081b)
 
 
 
