@@ -1,6 +1,6 @@
 # Contributions
 
-Hardware And Physical Design: /n
+Hardware And Physical Design: 
 
 Software:
 
