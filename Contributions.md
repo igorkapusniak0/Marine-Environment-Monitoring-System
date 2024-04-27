@@ -1,10 +1,10 @@
 # Contributions
 
-Hardware And Physical Design: 
+Hardware And Physical Design: Jeff: 50% / Igor: 50% 
 
-Software:
+Software: Jeff: 50% / Igor: 50%
 
-Database: 
+Database: Jeff: 50% / Igor: 50%
 
-Frontend: 
+Frontend: Jeff: 50% / Igor: 50%
 
