@@ -2,9 +2,9 @@
 
 Hardware And Physical Design: /n
 
-Software: /n
+Software:
 
-Database: /n
+Database: 
 
-Frontend: /n
+Frontend: 
 
