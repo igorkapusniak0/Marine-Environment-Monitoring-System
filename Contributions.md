@@ -8,6 +8,8 @@ Database: Jeff: 50% / Igor: 50%
 
 Frontend: Jeff: 50% / Igor: 50%
 
+AWS: Jeff: 50% / Igor: 50%
+
 Slide Show: Jeff: 50% / Igor: 50%
 
 GitHub Repository: Jeff: 50% / Igor: 50%
