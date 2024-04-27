@@ -189,8 +189,8 @@ To expand this project to work with additional sensors, a few changes need to be
 6. Set up callbacks from the Sigfox Backend to Thingspeak and InfluxDB (give it an appropriate key that differs from 'temp') 
    The Python script should not need to change (unless the data needs to be modified in some way) as the data is inserted dynamically based on the key specified in the callback.
 
-  
 
+## Gif of End Product
 ![ezgif-3-d903da6700](https://github.com/igorkapusniak0/Marine-Environment-Monitoring-System/assets/114166214/dd8b5079-44b3-40b0-9fb1-27d69c10081b)
 
 
